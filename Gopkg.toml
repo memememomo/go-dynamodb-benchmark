@@ -1,0 +1,9 @@
+[prune]
+   go-tests = true
+   unused-packages = true
+
+[[constraint]]
+   name = "github.com/aws/aws-lambda-go"
+
+[[constraint]]
+   name = "github.com/guregu/dynamo"

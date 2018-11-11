@@ -1,0 +1,11 @@
+FROM golang:1.10.2-alpine
+
+RUN apk add --no-cache git bash make curl gcc libc-dev openssl && \
+    go get -u github.com/golang/dep/cmd/dep && \
+    go get -u golang.org/x/lint/golint && \
+    go get -u github.com/kyoh86/richgo && \
+    go get -u github.com/derekparker/delve/cmd/dlv
+
+WORKDIR /go/src/dynamodb-benchmark
+COPY . /go/src/dynamodb-benchmark
+
